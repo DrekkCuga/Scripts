@@ -34,6 +34,7 @@ sudo pacman -S tailscale
 sudo systemctl enable tailscaled
 
 #Social
+#TODO make these sections optional or something
 yay -S extra/telegram-desktop
 sudo pacman -S discord
 
