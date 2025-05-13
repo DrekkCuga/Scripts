@@ -1,6 +1,6 @@
 #Setup Multilib
 sudo sed -i -e '/#\[multilib\]/,+1s/^#//' /etc/pacman.conf
-pacman -Syu
+sudo pacman -Syu
 
 
 #Install yay
@@ -44,4 +44,6 @@ yay -S extra/telegram-desktop
 sudo pacman -S discord
 
 #Post-Install
+sudo systemctl enable tailscaled
+sudo systemctl start tailscaled
 sudo tailscale up
