@@ -35,7 +35,7 @@ sudo pacman -S linux-headers --noconfirm --needed
 
 #Tailscale
 sudo pacman -S tailscale --noconfirm --needed
-sudo systemctl enable tailscaled
+sudo systemctl enable --now tailscaled
 
 #Social
 #TODO make these sections optional or something
@@ -43,8 +43,6 @@ yay -S extra/telegram-desktop --answerclean Always --answerdiff None --removemak
 sudo pacman -S discord --noconfirm --needed
 
 #Post-Install
-sudo systemctl enable tailscaled
-sudo systemctl start tailscaled
 sudo tailscale up
 
 echo "Attach egpu and run \`all-ways-egpu\` as root"
